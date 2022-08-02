@@ -1,21 +1,26 @@
-// import {useSelector} from "react-redux";
-// import {imageBaseURL} from "../../constants";
-//
-// function MoviesListCard({id}) {
-//     console.log(id)
-//     const {movies} = useSelector(state => state.movies);
-//
-//     const movie = movies.filter(el => el.id === id)
-//     console.log(movies)
-//
-//     return (<div>
-//             MoviesListCard
-//             <div>{movie.title}</div>
-//             <img src={`${imageBaseURL}${movie.poster_path}`} alt={`poster ${movie.title}`}/>
-//             <div>{movie.overview}</div>
-//         </div>
-//     );
-// }
-//
-// export default MoviesListCard;
+import {useLocation} from "react-router-dom";
 
+import {imageBaseURL} from "../../constants";
+
+
+function MovieListCard(props) {
+    const {state} = useLocation()
+    const movie = state.data.movie
+    const genres = state.data.genres
+
+    return (
+        <div>
+            <img src={`${imageBaseURL}${movie.backdrop_path}`} alt={`poster ${movie.title}`}/>
+            {/*<img src={`${imageBaseURL}${movie.poster_path}`} alt={`poster ${movie.title}`}/>*/}
+            <div>
+                <div><h1>{movie.title}</h1></div>
+                <div>Release date: <h2>{movie.release_date}</h2></div>
+                <div>Overview:<h2>{movie.overview}</h2></div>
+                <div><h2>{genres.join(', ')}</h2></div>
+
+            </div>
+        </div>
+    );
+}
+
+export {MovieListCard}

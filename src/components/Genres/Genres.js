@@ -3,7 +3,7 @@ import {useEffect} from "react";
 
 import {GenreBadge} from "../GenreBadge";
 import {genresActions} from "../../redux";
-
+import css from './Genres.module.css'
 
 
 function Genres() {
@@ -14,9 +14,8 @@ function Genres() {
         dispatch(genresActions.getAll())
     },[])
    return (
-        <div>
-            GENRES
-            {genres.map(genre=> <GenreBadge key={genre.id} genre={genre}/>)}
+        <div className={css.GenresList}>
+             {genres.map(genre=> <GenreBadge key={genre.id} genre={genre}/>)}
         </div>
     );
 }

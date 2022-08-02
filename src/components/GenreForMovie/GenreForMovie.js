@@ -2,9 +2,9 @@
 function GenreForMovie({name}) {
     return (
         <div>
-            <p>{name}</p>
+            {name}
         </div>
     );
 }
 
-export default GenreForMovie;
+export {GenreForMovie}

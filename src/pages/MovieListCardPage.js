@@ -1,14 +1,9 @@
-import {useLocation} from "react-router-dom";
-import {imageBaseURL} from "../constants";
+import {MovieListCard} from "../components/MoviesListCard";
 
 function MovieListCardPage(props) {
-    const {state} = useLocation()
-
-    return (
+      return (
         <div>
-            <div>{state.title}</div>
-            <img src={`${imageBaseURL}${state.poster_path}`} alt={`poster ${state.title}`}/>
-             <div>{state.overview}</div>
+            <MovieListCard/>
         </div>
     );
 }

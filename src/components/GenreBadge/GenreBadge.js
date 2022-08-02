@@ -1,6 +1,8 @@
+import css from './GenreBadge.module.css';
+
 function GenreBadge({genre}) {
     return (
-        <div>
+        <div className={css.GenreName}>
              <div>{genre.name}</div>
         </div>
     );

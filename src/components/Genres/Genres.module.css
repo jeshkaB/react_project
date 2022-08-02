@@ -1,0 +1,4 @@
+.GenresList {
+    display: flex;
+    flex-wrap: wrap;
+}
