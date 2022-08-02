@@ -1,0 +1,6 @@
+.Movie {
+    display: flex;
+    width: 200px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

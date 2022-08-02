@@ -1,0 +1,6 @@
+.Movies {
+    background-color: lightgrey;
+    display: flex;
+    flex-wrap: wrap;
+
+}
