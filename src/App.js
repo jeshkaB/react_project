@@ -7,9 +7,9 @@ import {MainLayout} from "./Layouts";
 
 function App() {
     return (
-        <Routes>
+        <Routes >
             <Route path={'/'} element={<MainLayout/>}>
-                {/*<Route index element={<Navigate to={'movies'}/>}/>*/}
+                <Route index element={<Navigate to={'movies'}/>}/>
                 <Route path={'/movies'} element={<MoviesListPage/>}/>
                 <Route path={'/movies/:id'} element={<MovieListCardPage/>}/>
             </Route>

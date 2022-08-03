@@ -1,0 +1,28 @@
+.Header_light {
+    font-size: 20px;
+    display: flex;
+    background: azure;
+    color: black;
+    align-items: center;
+    justify-content: space-evenly;
+    }
+.Header_dark {
+    font-size: 20px;
+    display: flex;
+    background: darkslategrey;
+    color: whitesmoke;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.ToddleBlock {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+button {
+     height: 40px;
+    font-size: 20px;
+    font-weight: bolder;
+ }

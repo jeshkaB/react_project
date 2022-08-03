@@ -4,6 +4,7 @@ import {useNavigate} from 'react-router-dom'
 import {PosterPreview} from "../PosterPreview";
 import {StarsRating} from "../StarsRating";
 import {GenreForMovie} from "../GenreForMovie";
+import css from './Movie.module.css'
 
 function Movie({movie}) {
     let genres = [];
@@ -74,12 +75,12 @@ function Movie({movie}) {
     const data = {movie, genres}
        return (
         <div>
-            <div onClick={() => navigate(`${id}`, {state: {data}})}>
+            <div className={css.Movie} onClick={() => navigate(`${id}`, {state: {data}})}>
                 <PosterPreview poster_path={movie.poster_path} title={movie.title}/>
-                <div>
+                <div className={css.MovieInfo}>
                     <div><StarsRating rating={movie.vote_average}/></div>
-                    <div>{movie.release_date.slice(0,-6)}</div>
-                    <div>{genres.map((genre, index) => <GenreForMovie key={index} name={genre}/>)} </div>
+                    <div className={css.Year}>{movie.release_date.slice(0,-6)}</div>
+                    <div className={css.GenresInCard}>{genres.map((genre, index) => <GenreForMovie key={index} name={genre}/>)} </div>
 
                 </div>
             </div>

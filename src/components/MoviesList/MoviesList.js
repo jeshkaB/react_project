@@ -9,7 +9,7 @@ import css from './MoviesList.module.css'
 
 function MoviesList(props) {
 
-    const {movies,prev,next} = useSelector(state => state.movies);
+    const {movies} = useSelector(state => state.movies);
     const dispatch = useDispatch();
     const [query, setQuery] = useSearchParams({page:'1'});
 

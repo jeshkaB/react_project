@@ -1,0 +1,9 @@
+.Main_light {
+    background: azure;
+    color: black;
+}
+
+.Main_dark {
+    background: darkslategrey;
+    color: whitesmoke ;
+}

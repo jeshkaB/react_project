@@ -1,7 +1,23 @@
 .Movie {
+    margin: 10px;
     display: flex;
-    width: 200px;
+    width: 300px;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     /*color: */
+}
+.MovieInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Year {
+    font-size: 20px;
+    font-weight: bolder;
+}
+.GenresInCard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }

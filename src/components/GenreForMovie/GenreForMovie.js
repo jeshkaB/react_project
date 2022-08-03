@@ -1,7 +1,8 @@
+import css from './GenreForMovie.module.css'
 
 function GenreForMovie({name}) {
     return (
-        <div>
+        <div className={css.GenreName}>
             {name}
         </div>
     );

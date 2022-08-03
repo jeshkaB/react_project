@@ -4,6 +4,7 @@ import React from 'react';
 import StarRatings from "react-star-ratings/build/star-ratings";
 
 function StarsRating({rating}) {
+
    return (
         <div>
             <StarRatings
