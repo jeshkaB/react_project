@@ -1,3 +1,13 @@
 .BackdropImg {
     width: 800px;
 }
+.ImgBlock {
+    display: flex;
+}
+
+.ImgBlockInfo {
+    margin-left: 20px;
+}
+.Over {
+    margin-top: 20px;
+}

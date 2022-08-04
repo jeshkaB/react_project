@@ -1,0 +1,9 @@
+.HeaderG_light {
+    font-size: 40px;
+    justify-content: flex-start;
+    }
+.HeaderG_dark {
+    font-size: 40px;
+    color: whitesmoke;
+    justify-content: flex-start;
+}

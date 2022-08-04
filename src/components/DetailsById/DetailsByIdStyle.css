@@ -1,0 +1,13 @@
+.HomepageHref_light {
+    font-size: 30px;
+    color: black;
+}
+.HomepageHref_dark {
+    font-size: 30px;
+    color: whitesmoke;
+}
+.Trailer {
+    margin-top: 80px;
+    margin-bottom: 20px;
+    margin-left: 0;
+}

@@ -1,13 +1,14 @@
-import {useNavigate} from 'react-router-dom'
+import {useNavigate} from "react-router-dom";
 
+import css from "../MoviesListCard/MoviesListCard.module.css";
 import {PosterPreview} from "../PosterPreview";
 import {StarsRating} from "../StarsRating";
-import {GenreForMovie} from "../GenreForMovie";
-import css from './Movie.module.css'
 
-function Movie({movie}) {
+function MovieByGenreById({movie}) {
+    const navigate = useNavigate();
+
     let genres = [];
-    for (const element of movie.genre_ids) {
+        for (const element of movie.genre_ids) {
         switch (element) {
             case 28:
                 genres.push("Action");
@@ -69,23 +70,20 @@ function Movie({movie}) {
         }
     }
 
-    const navigate = useNavigate();
     const id = movie.id
-    const data = {movie, genres}
+    const data = {movie,genres}
 
-       return (
+    return (
         <div>
-            <div className={css.Movie} onClick={() => navigate(`${id}`, {state: {data}})}>
+            <div className={css.Movie} onClick={() => navigate(`/movies/${id}`, {state: {data}})}>
                 <PosterPreview poster_path={movie.poster_path} title={movie.title}/>
                 <div className={css.MovieInfo}>
                     <div><StarsRating rating={movie.vote_average}/></div>
-                    <div className={css.Year}>{movie.release_date.slice(0,-6)}</div>
-                    <div className={css.GenresInCard}>{genres.map((genre, index) => <GenreForMovie key={index} name={genre}/>)} </div>
+                    <div className={css.Year}>{movie.release_date.slice(0, -6)}</div>
 
                 </div>
             </div>
         </div>
-    );
+    )
 }
-
-export {Movie}
+export {MovieByGenreById}

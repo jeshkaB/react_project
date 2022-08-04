@@ -1,19 +1,19 @@
-import {Outlet} from 'react-router-dom'
 import {useSelector} from "react-redux";
+import {Outlet} from "react-router-dom";
 
-import {MoviesList} from "../components/MoviesList";
+import {MovieListByGenre} from "../components/MovieListByGenre";
 import './PageStyle.css'
 
-function MoviesListPage(props) {
+function MoviesListByGenrePage(props) {
 
     const {theme} = useSelector(state => state.theme)
 
     return (
         <div className={`Main_${theme}`}>
-            <MoviesList/>
+            <MovieListByGenre/>
             <Outlet/>
         </div>
     );
 }
 
-export {MoviesListPage}
+export {MoviesListByGenrePage}

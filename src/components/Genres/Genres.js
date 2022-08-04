@@ -1,10 +1,9 @@
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
 
-import {GenreBadge} from "../GenreBadge";
+import {Genre} from "../Genre";
 import {genresActions} from "../../redux";
-import css from './Genres.module.css'
-
+import './GenresStyle.css'
 
 function Genres() {
     const {genres} = useSelector(state => state.genres);
@@ -13,13 +12,12 @@ function Genres() {
     useEffect(()=>{
         dispatch(genresActions.getAll())
     },[])
+
    return (
-        <div className={css.GenresList}>
-             {genres.map(genre=> <GenreBadge key={genre.id} genre={genre}/>)}
+        <div className={'GenresList'}>
+             {genres.map(genre=> <Genre key={genre.id} genre={genre}/>)}
         </div>
     );
 }
-
-
 
 export {Genres};

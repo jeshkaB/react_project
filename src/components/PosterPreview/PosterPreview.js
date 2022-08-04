@@ -1,5 +1,6 @@
 import {imageBaseURL} from "../../constants";
 import css from './PosterPrewiew.module.css'
+
 function PosterPreview({poster_path, title}) {
     return (
         <div>

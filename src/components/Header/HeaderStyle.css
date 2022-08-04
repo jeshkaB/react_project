@@ -1,7 +1,7 @@
 .Header_light {
     font-size: 20px;
     display: flex;
-    background: azure;
+    background: #bbd5d5;
     color: black;
     align-items: center;
     justify-content: space-evenly;
@@ -9,7 +9,7 @@
 .Header_dark {
     font-size: 20px;
     display: flex;
-    background: darkslategrey;
+    background: #263838;
     color: whitesmoke;
     align-items: center;
     justify-content: space-evenly;
@@ -21,8 +21,16 @@
     flex-direction: row;
     align-items: center;
 }
-button {
-     height: 40px;
+.BackButton_light {
+    height: 75px;
+    width: 150px;
     font-size: 20px;
     font-weight: bolder;
  }
+.BackButton_dark {
+    height: 75px;
+    width: 150px;
+    font-size: 20px;
+    font-weight: bolder;
+    background: #83a1a1
+}

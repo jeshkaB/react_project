@@ -1,0 +1,10 @@
+.GenreName {
+    margin: 5px;
+}
+.GenreButton_light {
+    font-size: 20px;
+}
+.GenreButton_dark {
+    font-size: 20px;
+    background: #83a1a1
+}

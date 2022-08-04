@@ -3,6 +3,7 @@ import {Navigate, Route, Routes} from "react-router-dom";
 
 import {MovieListCardPage, MoviesListPage} from "./pages";
 import {MainLayout} from "./Layouts";
+import {MoviesListByGenrePage} from "./pages/MoviesListByGenrePage";
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
             <Route path={'/'} element={<MainLayout/>}>
                 <Route index element={<Navigate to={'movies'}/>}/>
                 <Route path={'/movies'} element={<MoviesListPage/>}/>
+                <Route path={'/movies/byGenre/:id'} element={<MoviesListByGenrePage/>}/>
                 <Route path={'/movies/:id'} element={<MovieListCardPage/>}/>
             </Route>
 
