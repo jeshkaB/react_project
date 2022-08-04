@@ -1,6 +1,6 @@
 import {useNavigate} from "react-router-dom";
 
-import css from "../MoviesListCard/MoviesListCard.module.css";
+import css from "../MovieCard/MovieCard.module.css";
 import {PosterPreview} from "../PosterPreview";
 import {StarsRating} from "../StarsRating";
 

@@ -1,2 +1,2 @@
-export * from './MovieListCardPage';
+export * from './MovieCardPage'
 export * from './MoviesListPage'

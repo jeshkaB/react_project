@@ -1,10 +1,10 @@
 import {useLocation} from "react-router-dom";
 
 import {imageBaseURL} from "../../constants";
-import css from './MoviesListCard.module.css'
+import css from './MovieCard.module.css'
 import {DetailsById} from "../DetailsById";
 
-function MovieListCard(props) {
+function MovieCard (props) {
     const {state} = useLocation()
 
     const movie = state.data.movie
@@ -28,4 +28,4 @@ function MovieListCard(props) {
     );
 }
 
-export {MovieListCard}
+export default MovieCard

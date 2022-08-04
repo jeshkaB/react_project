@@ -17,7 +17,7 @@ function MovieListByGenre() {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(moviesByGenreActions.getAllByGenre({id}))
+        dispatch(moviesByGenreActions.getAllByGenre(id))
     }, [id])
 
 

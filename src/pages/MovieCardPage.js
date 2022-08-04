@@ -1,17 +1,18 @@
 import {useSelector} from "react-redux";
 
-import {MovieListCard} from "../components/MoviesListCard";
 import './PageStyle.css'
+import MovieCard from "../components/MovieCard/MovieCard";
 
-function MovieListCardPage(props) {
+
+function MovieCardPage(props) {
 
     const {theme} = useSelector(state => state.theme)
 
     return (
         <div className={`Main_${theme}`}>
-            <MovieListCard/>
+            <MovieCard/>
         </div>
     );
 }
 
-export {MovieListCardPage}
+export {MovieCardPage}

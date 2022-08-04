@@ -4,6 +4,7 @@ import {youtubeURL} from "../../constants";
 import './VideosStyle.css'
 
 function Videos({videosList}) {
+
     const {theme} = useSelector(state => state.theme)
     const trailer = videosList.find(el=>el.type==="Trailer"&& el.site==="YouTube")
 
